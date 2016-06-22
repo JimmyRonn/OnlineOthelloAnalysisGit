@@ -41,15 +41,15 @@ function render_board()
 			pos = 10 * i + j;
 			if( board[pos] == EMPTY )
 			{
-				document.getElementById(pos.toString()).setAttribute('src', 'ee.gif');
+				document.getElementById(pos.toString()).setAttribute('src', './img/ee.gif');
 			}
 			else if( board[pos] == BLACKSQ )
 			{
-				document.getElementById(pos.toString()).setAttribute('src', 'bb.gif');
+				document.getElementById(pos.toString()).setAttribute('src', './img/bb.gif');
 			}
 			else if( board[pos] == WHITESQ )
 			{
-				document.getElementById(pos.toString()).setAttribute('src', 'ww.gif');
+				document.getElementById(pos.toString()).setAttribute('src', './img/ww.gif');
 			}
 		}
 	}
