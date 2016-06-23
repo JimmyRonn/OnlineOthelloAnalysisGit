@@ -3,11 +3,26 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Online Othello Analyzer</title>
-<script type="text/javascript" src="core.js">
-</script>
+<style>
+p {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+</style>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" src="core.js"></script>
+<script type="text/javascript" src="moves.js"></script>
+<script type="text/javascript" src="gui.js"></script>
 </head>
 
 <body onload="setup_board(),render_board(),update_count()">
+
+	<p>
+	Show valid moves: <input type="checkbox" id="valid_check" onclick="toggle_show_valid_moves()">
+	</p>
+		
+	<p id="count">"B0 - W0"</p>
+	
+
 	<table border="0" cellpadding="0" style="border-collapse: collapse" width="200" height="200" cellspacing="0">
 	<tbody><tr><td colspan="10"><img src="./img/abc.gif" width="200" height="20"></td></tr>
 	<tr><td><img src="./img/11.gif" width="20" height="20"></td>
@@ -165,8 +180,5 @@
 	<tr><td colspan="10"><img src="./img/abc.gif" width="200" height="20"></td></tr>
 	
 	</tbody></table>
-	
-	<p id="black_count">"Black: 0"</p>
-	<p id="white_count"></p>
 </body>
 </html>

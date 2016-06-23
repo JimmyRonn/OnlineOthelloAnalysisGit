@@ -2,13 +2,6 @@
  * 
  */
 
-var board = new Uint8Array(128);
-var ILLEGAL = -1;
-var BLACKSQ = 0;
-var EMPTY = 1;
-var WHITESQ = 2;
-var OUTSIDE = 3;
-
 function setup_board()
 {
 	for ( i = 0; i < 10; i++ )
@@ -25,7 +18,6 @@ function setup_board()
 			}
 		}
 	}
-	board[22] = WHITESQ;
 	
 	board[44] = WHITESQ;
 	board[45] = BLACKSQ;
@@ -33,32 +25,9 @@ function setup_board()
 	board[55] = WHITESQ;
 }
 
-function render_board()
-{
-	for ( i = 1; i <= 8; i++ )
-	{
-		for ( j = 1; j <= 8; j++ ) {
-			pos = 10 * i + j;
-			if( board[pos] == EMPTY )
-			{
-				document.getElementById(pos.toString()).setAttribute('src', './img/ee.gif');
-			}
-			else if( board[pos] == BLACKSQ )
-			{
-				document.getElementById(pos.toString()).setAttribute('src', './img/bb.gif');
-			}
-			else if( board[pos] == WHITESQ )
-			{
-				document.getElementById(pos.toString()).setAttribute('src', './img/ww.gif');
-			}
-		}
-	}
-}
-
 function update_count()
 {
-	document.getElementById('black_count').innerHTML = "Black: " + disc_count(BLACKSQ).toString();
-	document.getElementById('white_count').innerHTML = "White: " + disc_count(WHITESQ).toString();
+	document.getElementById('count').innerHTML = "B" + disc_count(BLACKSQ).toString() + " - W" + disc_count(WHITESQ).toString();
 }
 
 function disc_count( side_to_move ) {
