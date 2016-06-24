@@ -2,7 +2,21 @@
  * 
  */
 
-/*
+var dir_mask = [
+  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+  0,  81,  81,  87,  87,  87,  87,  22,  22,   0,
+  0,  81,  81,  87,  87,  87,  87,  22,  22,   0,
+  0, 121, 121, 255, 255, 255, 255, 182, 182,   0,
+  0, 121, 121, 255, 255, 255, 255, 182, 182,   0,
+  0, 121, 121, 255, 255, 255, 255, 182, 182,   0,
+  0, 121, 121, 255, 255, 255, 255, 182, 182,   0,
+  0,  41,  41, 171, 171, 171, 171, 162, 162,   0,
+  0,  41,  41, 171, 171, 171, 171, 162, 162,   0,
+  0,   0,   0,   0,   0,   0,   0,   0,   0,   0 
+ ];
+var move_offset = [ 1, -1, 9, -9, 10, -10, 11, -11 ];
+
+
 function valid_move( move, side_to_move ) 
 {
 	var i;
@@ -31,12 +45,28 @@ function valid_move( move, side_to_move )
 
   return 0;
 }
-*/
 
 function update_valid_moves()
 {
-	valid_moves[0] = 11;
-	valid_moves[1] = 12;
-	valid_moves[2] = 21;
-	num_valid_moves = 3;
+	var valid_moves_found = 0;
+	for ( i = 1; i <= 8; i++ )
+	{
+		for ( j = 10 * i + 1; j <= 10 * i + 8; j++ )
+    	{
+			if ( board[j] == EMPTY )
+			{
+				if( valid_move(j, side_to_move) )
+				{
+					valid_moves[valid_moves_found] = j;
+					valid_moves_found++;
+				}
+			}
+		}
+	}
+
+	for( ; valid_moves_found < num_valid_moves; valid_moves_found++ )
+	{
+		valid_moves[valid_moves_found] = 0;
+	}
+	num_valid_moves = valid_moves_found;
 }

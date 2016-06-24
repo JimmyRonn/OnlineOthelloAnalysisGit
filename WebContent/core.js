@@ -2,6 +2,11 @@
  * 
  */
 
+function OPP( color )
+{
+	return (BLACKSQ + WHITESQ) - color;
+}
+
 function setup_board()
 {
 	for ( i = 0; i < 10; i++ )
