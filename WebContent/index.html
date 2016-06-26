@@ -14,7 +14,7 @@ p {
 <script type="text/javascript" src="gui.js"></script>
 </head>
 
-<body onload="setup_board(),render_board(),update_count()">
+<body onload="setup_board(),render_board(),update_count(),update_valid_moves()">
 
 	<p>
 	Show valid moves: <input type="checkbox" id="valid_check" onclick="toggle_show_valid_moves()">
@@ -26,154 +26,154 @@ p {
 	<table border="0" cellpadding="0" style="border-collapse: collapse" width="200" height="200" cellspacing="0">
 	<tbody><tr><td colspan="10"><img src="./img/abc.gif" width="200" height="20"></td></tr>
 	<tr><td><img src="./img/11.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a1')">
+	  <td><a href="javascript:move('11')">
 	  <img src="./img/ee.gif" id="11" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b1')">
+	  <td><a href="javascript:move('12')">
 	  <img src="./img/ee.gif" id="12" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c1')">
+	  <td><a href="javascript:move('13')">
 	  <img src="./img/ee.gif" id="13" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d1')">
+	  <td><a href="javascript:move('14')">
 	  <img src="./img/ee.gif" id="14" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e1')">
+	  <td><a href="javascript:move('15')">
 	  <img src="./img/ee.gif" id="15" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f1')">
+	  <td><a href="javascript:move('16')">
 	  <img src="./img/ee.gif" id="16" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g1')">
+	  <td><a href="javascript:move('17')">
 	  <img src="./img/ee.gif" id="17" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h1')">
+	  <td><a href="javascript:move('18')">
 	  <img src="./img/ee.gif" id="18" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/11.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/22.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a2')">
+	  <td><a href="javascript:move('21')">
 	  <img src="./img/ee.gif" id="21" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b2')">
+	  <td><a href="javascript:move('22')">
 	  <img src="./img/ee.gif" id="22" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c2')">
+	  <td><a href="javascript:move('23')">
 	  <img src="./img/ee.gif" id="23" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d2')">
+	  <td><a href="javascript:move('24')">
 	  <img src="./img/ee.gif" id="24" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e2')">
+	  <td><a href="javascript:move('25')">
 	  <img src="./img/ee.gif" id="25" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f2')">
+	  <td><a href="javascript:move('26')">
 	  <img src="./img/ee.gif" id="26" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g2')">
+	  <td><a href="javascript:move('27')">
 	  <img src="./img/ee.gif" id="27" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h2')">
+	  <td><a href="javascript:move('28')">
 	  <img src="./img/ee.gif" id="28" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/22.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/33.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a3')">
+	  <td><a href="javascript:move('31')">
 	  <img src="./img/ee.gif" id="31" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b3')">
+	  <td><a href="javascript:move('32')">
 	  <img src="./img/ee.gif" id="32" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c3')">
+	  <td><a href="javascript:move('33')">
 	  <img src="./img/ee.gif" id="33" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d3')">
+	  <td><a href="javascript:move('34')">
 	  <img src="./img/b0.gif" id="34" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e3')">
+	  <td><a href="javascript:move('35')">
 	  <img src="./img/ee.gif" id="35" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f3')">
+	  <td><a href="javascript:move('36')">
 	  <img src="./img/ee.gif" id="36" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g3')">
+	  <td><a href="javascript:move('37')">
 	  <img src="./img/ee.gif" id="37" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h3')">
+	  <td><a href="javascript:move('38')">
 	  <img src="./img/ee.gif" id="38" width="20" height="20" border="0"></a></td>
 	<td><img src="./img/33.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/44.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a4')">
+	  <td><a href="javascript:move('41')">
 	  <img src="./img/ee.gif" id="41" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b4')">
+	  <td><a href="javascript:move('42')">
 	  <img src="./img/ee.gif" id="42" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c4')">
+	  <td><a href="javascript:move('43')">
 	  <img src="./img/b0.gif" id="43" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d4')">
+	  <td><a href="javascript:move('44')">
 	  <img src="./img/ww.gif" id="44" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e4')">
+	  <td><a href="javascript:move('45')">
 	  <img src="./img/bb.gif" id="45" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f4')">
+	  <td><a href="javascript:move('46')">
 	  <img src="./img/ee.gif" id="46" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g4')">
+	  <td><a href="javascript:move('47')">
 	  <img src="./img/ee.gif" id="47" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h4')">
+	  <td><a href="javascript:move('48')">
 	  <img src="./img/ee.gif" id="48" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/44.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/55.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a5')">
+	  <td><a href="javascript:move('51')">
 	  <img src="./img/ee.gif" id="51" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b5')">
+	  <td><a href="javascript:move('52')">
 	  <img src="./img/ee.gif" id="52" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c5')">
+	  <td><a href="javascript:move('53')">
 	  <img src="./img/ee.gif" id="53" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d5')">
+	  <td><a href="javascript:move('54')">
 	  <img src="./img/bb.gif" id="54" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e5')">
+	  <td><a href="javascript:move('55')">
 	  <img src="./img/ww.gif" id="55" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f5')">
+	  <td><a href="javascript:move('56')">
 	  <img src="./img/b0.gif" id="56" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g5')">
+	  <td><a href="javascript:move('57')">
 	  <img src="./img/ee.gif" id="57" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h5')">
+	  <td><a href="javascript:move('58')">
 	  <img src="./img/ee.gif" id="58" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/55.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/66.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a6')">
+	  <td><a href="javascript:move('61')">
 	  <img src="./img/ee.gif" id="61" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b6')">
+	  <td><a href="javascript:move('62')">
 	  <img src="./img/ee.gif" id="62" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c6')">
+	  <td><a href="javascript:move('63')">
 	  <img src="./img/ee.gif" id="63" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d6')">
+	  <td><a href="javascript:move('64')">
 	  <img src="./img/ee.gif" id="64" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e6')">
+	  <td><a href="javascript:move('65')">
 	  <img src="./img/b0.gif" id="65" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f6')">
+	  <td><a href="javascript:move('66')">
 	  <img src="./img/ee.gif" id="66" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g6')">
+	  <td><a href="javascript:move('67')">
 	  <img src="./img/ee.gif" id="67" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h6')">
+	  <td><a href="javascript:move('68')">
 	  <img src="./img/ee.gif" id="68" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/66.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/77.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a7')">
+	  <td><a href="javascript:move('71')">
 	  <img src="./img/ee.gif" id="71" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b7')">
+	  <td><a href="javascript:move('72')">
 	  <img src="./img/ee.gif" id="72" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c7')">
+	  <td><a href="javascript:move('73')">
 	  <img src="./img/ee.gif" id="73" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d7')">
+	  <td><a href="javascript:move('74')">
 	  <img src="./img/ee.gif" id="74" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e7')">
+	  <td><a href="javascript:move('75')">
 	  <img src="./img/ee.gif" id="75" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f7')">
+	  <td><a href="javascript:move('76')">
 	  <img src="./img/ee.gif" id="76" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g7')">
+	  <td><a href="javascript:move('77')">
 	  <img src="./img/ee.gif" id="77" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h7')">
+	  <td><a href="javascript:move('78')">
 	  <img src="./img/ee.gif" id="78" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/77.gif" width="20" height="20"></td>
 	</tr>
 	<tr><td><img src="./img/88.gif" width="20" height="20"></td>
-	  <td><a href="javascript:move('a8')">
+	  <td><a href="javascript:move('81')">
 	  <img src="./img/ee.gif" id="81" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('b8')">
+	  <td><a href="javascript:move('82')">
 	  <img src="./img/ee.gif" id="82" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('c8')">
+	  <td><a href="javascript:move('83')">
 	  <img src="./img/ee.gif" id="83" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('d8')">
+	  <td><a href="javascript:move('84')">
 	  <img src="./img/ee.gif" id="84" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('e8')">
+	  <td><a href="javascript:move('85')">
 	  <img src="./img/ee.gif" id="85" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('f8')">
+	  <td><a href="javascript:move('86')">
 	  <img src="./img/ee.gif" id="86" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('g8')">
+	  <td><a href="javascript:move('87')">
 	  <img src="./img/ee.gif" id="87" width="20" height="20" border="0"></a></td>
-	  <td><a href="javascript:move('h8')">
+	  <td><a href="javascript:move('88')">
 	  <img src="./img/ee.gif" id="88" width="20" height="20" border="0"></a></td>
 	  <td><img src="./img/88.gif" width="20" height="20"></td>
 	</tr>
